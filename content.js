@@ -12,9 +12,9 @@ window.SITE = {
   /* ---------- 1. THÔNG TIN CÁ NHÂN ---------- */
   owner: {
     name: "Hoàng Minh Hiển",
-    shortName: "Anh Dao",
-    initials: "AD",
-    photo: "",                                   // TODO: "assets/img/dao.jpg"
+    shortName: "Minh Hien",
+    initials: "MH",
+    photo: "assets/img/Hien.jpg",                                   // TODO: "assets/img/dao.jpg"
     headline: "Commercial & Financial Analysis",
     tagline:
       "I turn numbers into decisions — from distributor performance and sales forecasting to full three-statement financial analysis.",
