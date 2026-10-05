@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phan Thi Anh Dao — Portfolio</title>
+  <meta name="description" content="Portfolio of Phan Thi Anh Dao — commercial & financial analysis. Featured project: Vinamilk financial statements analysis FY2021–FY2025." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#home" class="brand"><span class="brand-mark" id="brandMark">AD</span><span id="brandName">Anh Dao</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#team">Team</a>
+        <a href="#project">Project</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero-bg"><div class="orb o1"></div><div class="orb o2"></div><div class="grid-lines"></div></div>
+    <div class="container hero-inner">
+      <div class="hero-text reveal">
+        <p class="eyebrow" id="heroHeadline"></p>
+        <h1 id="heroName"></h1>
+        <p class="lead" id="heroTagline"></p>
+        <div class="hero-cta">
+          <a href="#project" class="btn btn-gold">View featured project</a>
+          <a href="#" class="btn btn-ghost" id="heroCv" target="_blank" rel="noopener">Download CV</a>
+        </div>
+        <p class="hero-meta"><span id="heroLocation"></span></p>
+      </div>
+      <div class="hero-card reveal">
+        <div class="avatar xl" id="heroAvatar"></div>
+        <div class="hero-highlights" id="heroHighlights"></div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-cue" aria-label="Scroll"><span></span></a>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="kicker">01 — About me</p>
+        <h2>Introduction</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal" id="aboutText"></div>
+        <div class="skills reveal" id="skills"></div>
+      </div>
+      <div class="timeline reveal" id="timeline"></div>
+    </div>
+  </section>
+
+  <!-- ============ TEAM ============ -->
+  <section class="section alt" id="team">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="kicker">02 — The team</p>
+        <h2>Project team members</h2>
+        <p class="sub">Five analysts, one integrated report. Each member owned a workstream and all members cross-checked the final figures.</p>
+      </div>
+      <div class="team-grid" id="teamGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECT ============ -->
+  <section class="section" id="project">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="kicker">03 — Featured project</p>
+        <p class="tag" id="projTag"></p>
+        <h2 id="projTitle"></h2>
+        <p class="sub" id="projSummary"></p>
+        <div class="proj-actions">
+          <a class="btn btn-navy" id="projReport" target="_blank" rel="noopener">Read the full report (PDF)</a>
+        </div>
+      </div>
+
+      <div class="kpi-grid" id="kpiGrid"></div>
+
+      <div class="tabs reveal">
+        <div class="tab-bar" role="tablist">
+          <button class="tab active" data-tab="approach">Approach</button>
+          <button class="tab" data-tab="findings">Key findings</button>
+          <button class="tab" data-tab="charts">Charts</button>
+          <button class="tab" data-tab="forecast">FY2026 scenarios</button>
+          <button class="tab" data-tab="pages">Report preview</button>
+        </div>
+
+        <div class="tab-panel active" id="tab-approach"><div class="steps" id="steps"></div></div>
+
+        <div class="tab-panel" id="tab-findings"><div class="findings" id="findings"></div></div>
+
+        <div class="tab-panel" id="tab-charts">
+          <div class="chart-grid">
+            <figure class="chart-card"><figcaption>Revenue vs. net profit vs. operating cash flow <span>VND bn</span></figcaption><div class="chart" id="chartIncome"></div><div class="legend" id="legendIncome"></div></figure>
+            <figure class="chart-card"><figcaption>Margin dynamics <span>% of revenue</span></figcaption><div class="chart" id="chartMargin"></div><div class="legend" id="legendMargin"></div></figure>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="tab-forecast">
+          <div class="scen-wrap">
+            <figure class="chart-card"><figcaption>FY2026F net income by scenario <span>VND bn</span></figcaption><div class="chart" id="chartScen"></div></figure>
+            <div class="scen-table-wrap"><table class="scen-table" id="scenTable"></table>
+              <p class="note">Sensitivity: every 1 ppt change in gross margin moves Base-case EBT by ≈ VND 549 bn (~6.2%).</p></div>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="tab-pages"><div class="pages" id="pages"></div></div>
+      </div>
+      <p class="disclaimer" id="projDisclaimer"></p>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section contact" id="contact">
+    <div class="container contact-inner reveal">
+      <p class="kicker light">04 — Contact</p>
+      <h2>Let's talk</h2>
+      <p class="sub light">Open to opportunities in financial analysis, commercial finance and sales operations.</p>
+      <div class="contact-links">
+        <a class="btn btn-gold" id="cEmail">Email me</a>
+        <a class="btn btn-ghost light" id="cLinkedin" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer"><div class="container">© <span id="year"></span> <span id="footName"></span>. All rights reserved.</div></footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox"><button class="lb-close" aria-label="Close">×</button><img alt="" id="lbImg" /><p id="lbCap"></p></div>
+
+  <script src="content.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
